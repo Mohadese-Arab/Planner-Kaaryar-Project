@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planner</title>
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+    <link rel="stylesheet" href="assets/styles/todo.css" />
+    <link rel="stylesheet" href="assets/styles/shortcut.css">
+    <link rel="stylesheet" href="assets/styles/dateWeather.css">
+    <link rel="stylesheet" href="assets/styles/responsive.css">
+  </head>
+  <body class="d-flex justify-center">
+    <div class="container d-grid">
+      <header class="d-flex">
+        <i class="fa-solid fa-gear"></i>
+        <i class="fa-solid fa-user"></i>
+      </header>
+      <main class="d-grid">
+        <section class="todo-list d-grid">
+          <h2>دست‌نویس</h2>
+          <ul id="todoList" class="d-flex"></ul>
+          <form action="" class="d-grid" id="todoForm">
+            <input
+              type="text"
+              id="taskInput"
+              placeholder="نوشتن تسک جدید"
+              autocomplete="off"
+            />
+            <button type="submit"><i class="fa-solid fa-plus"></i></button>
+          </form>
+        </section>
+        <article class="handyApps-section d-grid">
+          <section class="google d-flex align-center justify-center">
+            <form action="" class="d-grid">
+              <img src="assets/images/icons8-google-35.png" alt="google-logo" />
+              <input type="text" placeholder="جستجو در گوگل" />
+              <button type="button" class="d-flex align-center justify-center">
+                <i class="bx bx-search"></i>
+              </button>
+            </form>
+          </section>
+          <section class="apps d-grid">
+            <div class="item d-flex align-center justify-center">
+              <!-- <i class="bx bxs-grid"></i> -->
+              <img src="assets/images/menu-candy-box.256x256.png" alt="">
+              <span>دم‌دستی</span>
+            </div>
+          </section>
+        </article>
+        <article class="date-weather d-grid">
+          <section class="date d-grid">
+            <h2 class="time"></h2>
+            <h3 class="persian-date"></h3>
+            <div class="calender d-flex"></div>
+            <div class="option-wrapper d-flex">
+              <select name="timer" id="">
+                <option value="">تایمر</option>
+              </select>
+              <select name="" id="">
+                <option value="">اوقات شرعی</option>
+              </select>
+            </div>
+          </section>
+          <section class="weather">
+            <div class="todayWeather"></div>
+            <div class="precipitation-wrapper d-flex justify-center">
+              <select name="precipitation" id="">
+                <option value="">پیش‌بینی</option>
+              </select>
+            </div>
+          </section>
+        </article>
+      </main>
+    </div>
+    <!---- javaScript ---->
+    <script src="assets/scripts/todo.js"></script>
+    <script src="assets/scripts/dateWeather.js"></script>
+    <script src="assets/scripts/shortcut.js"></script>
+  </body>
+</html>

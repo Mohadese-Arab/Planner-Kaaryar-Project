@@ -1,0 +1,90 @@
+/* @import url("todo.css"); */
+
+/* ---- handy apps section start ---- */
+.container .handyApps-section {
+    min-height: fit-content;
+    grid-template-rows: 12vh 1fr;
+    gap: calc(var(--spacing-base) * 2);
+}
+
+.handyApps-section .google {
+    background-color: var(--primary-light-color);
+    border-radius: var(--medium-plus-radius);
+}
+
+.google form {
+    background-color: var(--gray-bg);
+    width: 90%;
+    height: 50px;
+    padding: calc(var(--spacing-base) * 2);
+    border-radius: var(--large-radius);
+    grid-template-columns: auto 1fr auto;
+    gap: calc(var(--spacing-base) * 2);
+}
+
+.google form input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: Vazirmatn;
+    color: var(--gray-color);
+    font-size: var(--medium-font-size);
+}
+
+::placeholder {
+    color: var(--light-gray-color);
+}
+
+.google form button {
+    background-color: var(--dark-blue-bg);
+    width: 55px;
+    border: none;
+    border-radius: var(--large-radius);
+    font-size: var(--heading-font-size);
+    color: var(--gray-bg);
+    cursor: pointer;
+}
+
+.handyApps-section .apps {
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 100px;
+    gap: calc(var(--spacing-base) * 2);
+}
+
+.apps .item {
+    background-color: var(--primary-light-color);
+    border-radius: var(--medium-plus-radius);
+    font-size: var(--heading-font-size);
+    font-weight: bold;
+    flex-direction: column;
+}
+
+.apps img {
+    width: 25px;
+    height: 25px;
+}
+
+.apps .item span {
+    font-size: var(--smaller-font-size);
+    color: var(--gray-color);
+}
+
+.apps .item:first-child span {
+    font-size: var(--medium-plus-font-size);
+    color: var(--dark-blue-bg);
+    margin-top: calc(var(--spacing-base) * 2);
+}
+
+.apps .item i {
+    color: var(--light-gray-color);
+    cursor: pointer;
+}
+
+.apps .item:first-child {
+    flex-direction: column;
+}
+
+.apps .item:first-child i {
+    color: var(--dark-blue-bg);
+    font-size: var(--large-font-size);
+}

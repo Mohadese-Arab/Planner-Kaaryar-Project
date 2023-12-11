@@ -1,0 +1,88 @@
+.container .date-weather {
+    background-color: var(--primary-light-color);
+    height: 47%;
+    border-radius: var(--medium-plus-radius);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr;
+}
+
+.date-weather .date {
+    padding: calc(var(--spacing-base) * 2) var(--spacing-base);
+    border-bottom: 1px solid var(--secondary-light-color);
+    border-left: 1px solid var(--secondary-light-color);
+}
+
+.date h2 {
+    color: var(--heading-blue-color);
+    text-align: center;
+    font-size: var(--large-font-size);
+}
+
+.date h3 {
+    text-align: center;
+    font-size: var(--heading-font-size);
+}
+
+.calender p {
+    color: var(--gray-color);
+    font-size: var(--smaller-font-size);
+    padding-right: var(--space-base-plus);
+    position: relative;
+}
+
+.calender .gregorian-date::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 12px;
+    background-color: var(--secondary-light-color);
+    position: absolute;
+    right: 0;
+    top: var(--spacing-base);
+}
+
+.option-wrapper {
+    gap: var(--space-base-plus);
+    justify-self: center;
+    margin-top: calc(var(--spacing-base) * 2);
+}
+
+.date select,
+.weather select {
+    height: 30px;
+    padding: 0 2px;
+    border-radius: var(--medium-plus-radius);
+    border: 1px solid var(--light-gray-color);
+    font-family: Vazirmatn;
+    color: var(--gray-color);
+    outline: none;
+}
+
+.date-weather .weather {
+    padding: calc(var(--spacing-base) * 2) var(--spacing-base);
+    border-bottom: 1px solid var(--secondary-light-color);
+}
+
+.weather h2 {
+    font-size: var(--large-font-size);
+    color: var(--gray-color);
+    text-align: center;
+}
+
+.weather .temperature-description {
+    font-weight: bold;
+    font-size: var(small-font-size);
+    text-align: center;
+    margin-top: calc(var(--spacing-base) * 2);
+}
+
+.weather .max-min {
+    font-size: var(--small-font-size);
+    gap: var(--spacing-base);
+    margin-top: calc(var(--spacing-base) * 2);
+    color: var(--gray-color);
+}
+
+.weather .precipitation-wrapper {
+    margin-top: calc(var(--spacing-base) * 4);
+}

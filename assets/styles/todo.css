@@ -1,0 +1,189 @@
+@import url("fonts.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #C4DEF7;
+    --primary-light-color: #fff;
+    --secondary-light-color: #e0e0e2;
+    --gray-color: #767981;
+    --gray-bg: #f3f4f6;
+    --light-gray-color: #c2c3c7;
+    --green-bg: #cef0d9;
+    --green-border: #a2e3b6;
+    --heading-blue-color: #276ef7;
+    --dark-blue-bg: #3d518f;
+    --spacing-base: 4px;
+    --space-base-plus: 6px;
+    --heading-font-size: 1.5rem;
+    --smaller-font-size: 0.8rem;
+    --small-font-size: 0.9rem;
+    --medium-font-size: 1rem;
+    --medium-plus-font-size: 1.1rem;
+    --large-font-size: 1.8rem;
+    --small-radius: 5px;
+    --medium-radius: 7px;
+    --medium-plus-radius: 15px;
+    --large-radius: 25px;
+}
+
+body {
+    background-color: var(--main-color);
+    font-family: Vazirmatn, sans-serif;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.dir-column {
+    flex-direction: column;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+.container {
+    height: calc(100vh - 50px);
+    max-width: 1265px;
+    width: 100%;
+    margin: calc(var(--spacing-base) * 4);
+    grid-template-rows: auto 1fr;
+    gap: calc(var(--spacing-base) * 4);
+}
+
+.container header {
+    direction: ltr;
+    color: var(--primary-light-color);
+    font-size: var(--medium-plus-font-size);
+    gap: calc(var(--spacing-base) * 4);
+}
+
+.container main {
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: calc(var(--spacing-base) * 2);
+}
+
+/* ---- to-do list section start ---- */
+.container .todo-list {
+    height: 100%;
+    background-color: var(--primary-light-color);
+    border-radius: var(--medium-plus-radius);
+    grid-template-rows: auto 1fr auto;
+}
+
+.todo-list h2 {
+    font-size: var(--heading-font-size);
+    border-bottom: 1px solid var(--secondary-light-color);
+    padding: calc(var(--spacing-base) * 2) calc(var(--spacing-base) * 4);
+}
+
+.todo-list ul {
+    padding: var(--space-base-plus);
+    border-bottom: 1px solid var(--secondary-light-color);
+    flex-direction: column;
+    gap: var(--spacing-base);
+}
+
+.todo-list ul li {
+    font-size: var(--medium-font-size);
+    padding: var(--spacing-base);
+    border: 1px solid var(--secondary-light-color);
+    border-radius: calc(var(--medium-plus-radius) - 3px);
+    position: relative;
+}
+
+.todo-list ul li::before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-color: var(--green-bg);
+    border: 1px solid var(--green-border);
+    margin-left: var(--spacing-base);
+    border-radius: var(--small-radius);
+}
+
+.todo-list ul li span {
+    color: var(--gray-color);
+    margin: 0 var(--spacing-base);
+}
+
+.todo-list ul li i {
+    color: var(--gray-color);
+    position: absolute;
+    left: var(--spacing-base);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.todo-list ul li:hover i {
+    visibility: visible;
+    opacity: 1;
+}
+
+.todo-list form {
+    margin: calc(var(--spacing-base) * 4);
+    padding: calc(var(--spacing-base) * 2);
+    border: 1px solid var(--light-gray-color);
+    border-radius: var(--medium-radius);
+    grid-template-columns: 1fr auto;
+    box-shadow: 1px 1px 3px 0 var(--light-gray-color);
+}
+
+.todo-list form input {
+    border: none;
+    outline: none;
+    font-family: Vazirmatn, sans-serif;
+}
+
+.todo-list form button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: var(--small-font-size);
+    color: var(--gray-color);
+    cursor: pointer;
+}
+
+/* scroll style */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray-bg);
+    border-radius: var(--small-radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--light-gray-color);
+}

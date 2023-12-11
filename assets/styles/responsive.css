@@ -1,0 +1,119 @@
+@media (max-width : 481px) {
+    .container {
+        height: auto;
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .container main {
+        grid-template-columns: 1fr;
+        position: relative;
+        top: calc(12vh + calc(var(--spacing-base) * 2));
+        padding-bottom: calc(var(--spacing-base) * 4);
+    }
+
+    .container .todo-list {
+        order: 3;
+        min-height: 90vh;
+    }
+
+    .container .handyApps-section {
+        order: 2;
+        grid-template-rows: 1fr;
+    }
+
+    .handyApps-section .google {
+        width: 100%;
+        height: 12vh;
+        position: absolute;
+        top: 0;
+        transform: translateY(calc(-100% - calc(var(--spacing-base) * 2)));
+    }
+
+    .handyApps-section .apps {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .container .date-weather {
+        min-height: 35vh;
+    }
+}
+
+@media (min-width : 481px) and (max-width : 767px) {
+    .container {
+        height: auto;
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .container main {
+        grid-template-columns: 1fr;
+        position: relative;
+        top: calc(12vh + calc(var(--spacing-base) * 2));
+        padding-bottom: calc(var(--spacing-base) * 4);
+    }
+
+    .container .todo-list {
+        order: 3;
+        min-height: 90vh;
+    }
+
+    .container .handyApps-section {
+        order: 2;
+        grid-template-rows: 1fr;
+    }
+
+    .handyApps-section .google {
+        width: 100%;
+        height: 12vh;
+        position: absolute;
+        top: 0;
+        transform: translateY(calc(-100% - calc(var(--spacing-base) * 2)));
+    }
+
+    .handyApps-section .apps {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .container .date-weather {
+        min-height: 35vh;
+    }
+}
+
+@media (min-width : 768px) and (max-width : 1024px) {
+    .container {
+        height: auto;
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .container main {
+        grid-template-columns: 1fr;
+        position: relative;
+        top: calc(12vh + calc(var(--spacing-base) * 2));
+        padding-bottom: calc(var(--spacing-base) * 4);
+    }
+
+    .container .todo-list {
+        order: 3;
+        min-height: 90vh;
+    }
+
+    .container .handyApps-section {
+        order: 2;
+        grid-template-rows: 1fr;
+    }
+
+    .handyApps-section .google {
+        width: 100%;
+        height: 12vh;
+        position: absolute;
+        top: 0;
+        transform: translateY(calc(-100% - calc(var(--spacing-base) * 2)));
+    }
+
+    .handyApps-section .apps {
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .container .date-weather {
+        min-height: 35vh;
+    }
+}
